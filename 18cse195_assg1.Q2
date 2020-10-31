@@ -1,0 +1,219 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "18cse195.assg1",
+      "provenance": [],
+      "collapsed_sections": [],
+      "authorship_tag": "ABX9TyMThZmSxjF2Mv2rEJTZHM6G",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/shambhu-shah/DM-DW-lab/blob/main/18cse195_assg1.Q2\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "myB4_x3f8R89",
+        "outputId": "8a29158e-2ea1-444a-e7de-5513ca3e9291",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "source": [
+        "#MEAN\n",
+        "n_num = [1, 2, 3, 4, 5] \n",
+        "n = len(n_num) \n",
+        "  \n",
+        "total_sum = sum(n_num) \n",
+        "mean = total_sum / n \n",
+        "  \n",
+        "print(\"Mean / Average is: \" + str(mean))\n"
+      ],
+      "execution_count": 4,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Mean / Average is: 3.0\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "o9t28zdkvQ5W",
+        "outputId": "ef7671bd-52a6-4ec6-b4ac-ae690cbf0b19",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "source": [
+        "#median\n",
+        "element = [1, 2, 3, 4, 5] \n",
+        "n = len(element) \n",
+        "element.sort() \n",
+        "  \n",
+        "if n % 2 == 0: \n",
+        "    median1 = element[n//2] \n",
+        "    median2 = element[n//2 - 1] \n",
+        "    median = (median1 + median2)/2\n",
+        "else: \n",
+        "    median = element[n//2] \n",
+        "print(\"Median is: \" + str(median)) "
+      ],
+      "execution_count": 5,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Median is: 3\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "wOwYNH1VwHcf",
+        "outputId": "fba078e1-033c-4231-d187-da1d7b2a8acb",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "source": [
+        "#mode\n",
+        "\n",
+        "# list of elements to calculate mode\n",
+        "num_list = [21, 13, 19, 13,19,13]\n",
+        "\n",
+        "# Print the list\n",
+        "print(num_list)\n",
+        "\n",
+        "# calculate the frequency of each item\n",
+        "data = collections.Counter(num_list)\n",
+        "data_list = dict(data)\n",
+        "\n",
+        "# Print the items with frequency\n",
+        "print(data_list)\n",
+        "\n",
+        "# Find the highest frequency\n",
+        "max_value = max(list(data.values()))\n",
+        "mode_val = [num for num, freq in data_list.items() if freq == max_value]\n",
+        "if len(mode_val) == len(num_list):\n",
+        "   print(\"No mode in the list\")\n",
+        "else:\n",
+        "   print(\"The Mode of the list is : \" + ', '.join(map(str, mode_val)))"
+      ],
+      "execution_count": 10,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "[21, 13, 19, 13, 19, 13]\n",
+            "{21: 1, 13: 3, 19: 2}\n",
+            "The Mode of the list is : 13\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "jYhpW80u3j_P"
+      },
+      "source": [
+        "## write a python code for calculating variance and standard deviation for the set of element"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "crOyg4024Lnz",
+        "outputId": "2f0fc65f-0056-4996-de0d-b9e3694a5031",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "source": [
+        "# variance\n",
+        "test_list = [6, 7, 3, 9, 10, 15] \n",
+        "  \n",
+        "# printing original list \n",
+        "print(\"The original list is : \" + str(test_list)) \n",
+        "  \n",
+        "# Variance of List  \n",
+        "mean = sum(test_list) / len(test_list) \n",
+        "res = sum((i - mean) ** 2 for i in test_list) / len(test_list) \n",
+        "  \n",
+        "print(\"The variance of list is : \" + str(res))"
+      ],
+      "execution_count": 12,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "The original list is : [6, 7, 3, 9, 10, 15]\n",
+            "The variance of list is : 13.888888888888891\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "V_NNs6Qq5dBR",
+        "outputId": "2a808680-63e0-488f-a369-d2ef818d6d81",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "source": [
+        "# standard deviation\n",
+        "test_list = [4, 5, 8, 9, 10] \n",
+        "  \n",
+        "# printing list \n",
+        "print(\"The original list : \" + str(test_list)) \n",
+        "  \n",
+        "# Standard deviation of list \n",
+        "# Using sum() + list comprehension \n",
+        "mean = sum(test_list) / len(test_list) \n",
+        "variance = sum([((x - mean) ** 2) for x in test_list]) / len(test_list) \n",
+        "res = variance ** 0.5\n",
+        "  \n",
+        "# Printing result \n",
+        "print(\"Standard deviation of sample is : \" + str(res))"
+      ],
+      "execution_count": 13,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "The original list : [4, 5, 8, 9, 10]\n",
+            "Standard deviation of sample is : 2.3151673805580453\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    }
+  ]
+}
