@@ -1,0 +1,335 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "18cse195.assg1",
+      "provenance": [],
+      "collapsed_sections": [],
+      "toc_visible": true,
+      "authorship_tag": "ABX9TyPOonkcHxjkyeLcmA75vP7k",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/shambhu-shah/DM-DW-lab/blob/main/18cse195_assg1.Q3\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "myB4_x3f8R89",
+        "outputId": "8a29158e-2ea1-444a-e7de-5513ca3e9291",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "source": [
+        "#MEAN\n",
+        "n_num = [1, 2, 3, 4, 5] \n",
+        "n = len(n_num) \n",
+        "  \n",
+        "total_sum = sum(n_num) \n",
+        "mean = total_sum / n \n",
+        "  \n",
+        "print(\"Mean / Average is: \" + str(mean))\n"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Mean / Average is: 3.0\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "vDY8zljO6LFu"
+      },
+      "source": [
+        "#**some basic program in python**"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "KJ6huYiI6bM_",
+        "outputId": "22f035ed-25cf-4744-d47b-db12ae618ef7",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "source": [
+        "#swap two variables \n",
+        "\n",
+        "x = 5\n",
+        "y = 10\n",
+        "\n",
+        "\n",
+        "#x = input('Enter value of x: ')\n",
+        "#y = input('Enter value of y: ')\n",
+        "\n",
+        "\n",
+        "temp = x\n",
+        "x = y\n",
+        "y = temp\n",
+        "\n",
+        "print('The value of x after swapping: {}'.format(x))\n",
+        "print('The value of y after swapping: {}'.format(y))"
+      ],
+      "execution_count": 1,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "The value of x after swapping: 10\n",
+            "The value of y after swapping: 5\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "EXkXrBys7WQy",
+        "outputId": "374c487a-6969-492b-f9ea-f1032d0939aa",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "source": [
+        "# Python Program to calculate the square root\n",
+        "\n",
+        "\n",
+        "num = 8 \n",
+        "\n",
+        "\n",
+        "\n",
+        "num_sqrt = num ** 0.5\n",
+        "print('The square root of %0.3f is %0.3f'%(num ,num_sqrt))"
+      ],
+      "execution_count": 2,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "The square root of 8.000 is 2.828\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "dIUGXuST70x4",
+        "outputId": "37a1b947-37e3-422e-c001-52f50788eafb",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "source": [
+        "# Python Program to find the area of triangle\n",
+        "\n",
+        "a = 5\n",
+        "b = 6\n",
+        "c = 7\n",
+        "\n",
+        "\n",
+        "\n",
+        "# calculate the semi-perimeter\n",
+        "s = (a + b + c) / 2\n",
+        "\n",
+        "# calculate the area\n",
+        "area = (s*(s-a)*(s-b)*(s-c)) ** 0.5\n",
+        "print('The area of the triangle is %0.2f' %area)"
+      ],
+      "execution_count": 3,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "The area of the triangle is 14.70\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "o9t28zdkvQ5W",
+        "outputId": "ef7671bd-52a6-4ec6-b4ac-ae690cbf0b19",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "source": [
+        "#median\n",
+        "element = [1, 2, 3, 4, 5] \n",
+        "n = len(element) \n",
+        "element.sort() \n",
+        "  \n",
+        "if n % 2 == 0: \n",
+        "    median1 = element[n//2] \n",
+        "    median2 = element[n//2 - 1] \n",
+        "    median = (median1 + median2)/2\n",
+        "else: \n",
+        "    median = element[n//2] \n",
+        "print(\"Median is: \" + str(median)) "
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Median is: 3\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "wOwYNH1VwHcf",
+        "outputId": "fba078e1-033c-4231-d187-da1d7b2a8acb",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "source": [
+        "#mode\n",
+        "\n",
+        "# list of elements to calculate mode\n",
+        "num_list = [21, 13, 19, 13,19,13]\n",
+        "\n",
+        "# Print the list\n",
+        "print(num_list)\n",
+        "\n",
+        "# calculate the frequency of each item\n",
+        "data = collections.Counter(num_list)\n",
+        "data_list = dict(data)\n",
+        "\n",
+        "# Print the items with frequency\n",
+        "print(data_list)\n",
+        "\n",
+        "# Find the highest frequency\n",
+        "max_value = max(list(data.values()))\n",
+        "mode_val = [num for num, freq in data_list.items() if freq == max_value]\n",
+        "if len(mode_val) == len(num_list):\n",
+        "   print(\"No mode in the list\")\n",
+        "else:\n",
+        "   print(\"The Mode of the list is : \" + ', '.join(map(str, mode_val)))"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "[21, 13, 19, 13, 19, 13]\n",
+            "{21: 1, 13: 3, 19: 2}\n",
+            "The Mode of the list is : 13\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "jYhpW80u3j_P"
+      },
+      "source": [
+        "## write a python code for calculating variance and standard deviation for the set of element"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "crOyg4024Lnz",
+        "outputId": "2f0fc65f-0056-4996-de0d-b9e3694a5031",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "source": [
+        "# variance\n",
+        "test_list = [6, 7, 3, 9, 10, 15] \n",
+        "  \n",
+        "# printing original list \n",
+        "print(\"The original list is : \" + str(test_list)) \n",
+        "  \n",
+        "# Variance of List  \n",
+        "mean = sum(test_list) / len(test_list) \n",
+        "res = sum((i - mean) ** 2 for i in test_list) / len(test_list) \n",
+        "  \n",
+        "print(\"The variance of list is : \" + str(res))"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "The original list is : [6, 7, 3, 9, 10, 15]\n",
+            "The variance of list is : 13.888888888888891\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "V_NNs6Qq5dBR",
+        "outputId": "2a808680-63e0-488f-a369-d2ef818d6d81",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "source": [
+        "# standard deviation\n",
+        "test_list = [4, 5, 8, 9, 10] \n",
+        "  \n",
+        "# printing list \n",
+        "print(\"The original list : \" + str(test_list)) \n",
+        "  \n",
+        "# Standard deviation of list \n",
+        "# Using sum() + list comprehension \n",
+        "mean = sum(test_list) / len(test_list) \n",
+        "variance = sum([((x - mean) ** 2) for x in test_list]) / len(test_list) \n",
+        "res = variance ** 0.5\n",
+        "  \n",
+        "# Printing result \n",
+        "print(\"Standard deviation of sample is : \" + str(res))"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "The original list : [4, 5, 8, 9, 10]\n",
+            "Standard deviation of sample is : 2.3151673805580453\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    }
+  ]
+}
